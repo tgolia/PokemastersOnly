@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PokemastersOnly.Api
 {
@@ -10,6 +12,17 @@ namespace PokemastersOnly.Api
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+
+            // Turn off XML
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            // Camel Case Contract Resolver
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
+                new CamelCasePropertyNamesContractResolver();
+
+            // Turn on CORS
+
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
