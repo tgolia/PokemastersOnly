@@ -25,7 +25,7 @@ namespace Pokemasters
             // Get your HttpConfiguration.
             var config = GlobalConfiguration.Configuration;
 
-            config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+            // config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
             // RegisterModule<IPokemon, MockPokemonRepository>
         }
     }
