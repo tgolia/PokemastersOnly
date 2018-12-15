@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using Autofac.Integration.WebApi;
+using Pokemasters.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +24,20 @@ namespace Pokemasters
 
             var builder = new ContainerBuilder();
 
-            // Get your HttpConfiguration.
+            //register api Controllers first
+            //matches class of global file
+            builder.RegisterApiControllers(typeof(WebApiApplication).Assembly);
+
+            //register dependencies for container
+            //can be parameter of IPokemon
+            builder.RegisterType<MockPokemonRepository>()
+                .As<IPokemon>();
+
+            var container = builder.Build();
+
             var config = GlobalConfiguration.Configuration;
 
-            // config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
-            // RegisterModule<IPokemon, MockPokemonRepository>
+            config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
     }
 }
