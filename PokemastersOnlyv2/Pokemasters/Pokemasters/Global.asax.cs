@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using Pokemasters.Models;
+using Pokemasters.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
