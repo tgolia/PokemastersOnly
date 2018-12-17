@@ -24,8 +24,8 @@ namespace Pokemasters.WebApi
 
             //register dependencies for container
             //can be parameter of IPokemon
-            builder.RegisterType<MockPokemonRepository>()
-                .As<IPokemon>();
+            builder.RegisterType<PokemonRepository>()
+                .As<IReadPokemon>();
 
             var container = builder.Build();
 

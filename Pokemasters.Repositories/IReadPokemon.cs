@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Pokemasters.Repositories.DBO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace Pokemasters.Repositories
 {
-    public interface IPokemon
+    public interface IReadPokemon
     {
-        IEnumerable<string> GetAllPokemon();
+        IEnumerable<Pokemon> GetAllPokemon();
         string GetPokemonById(int id);
     }
 }

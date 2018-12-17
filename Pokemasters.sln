@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemasters.Contracts", "Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemasters.WebApi", "Pokemasters.WebApi\Pokemasters.WebApi.csproj", "{4D1C25A9-7F53-4EAF-8B30-6225A91DB941}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemasters.UnitTests", "Pokemasters.UnitTests\Pokemasters.UnitTests.csproj", "{E30BE8AE-713F-4713-81F9-E7C7ECE57F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D1C25A9-7F53-4EAF-8B30-6225A91DB941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D1C25A9-7F53-4EAF-8B30-6225A91DB941}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D1C25A9-7F53-4EAF-8B30-6225A91DB941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E30BE8AE-713F-4713-81F9-E7C7ECE57F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E30BE8AE-713F-4713-81F9-E7C7ECE57F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E30BE8AE-713F-4713-81F9-E7C7ECE57F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E30BE8AE-713F-4713-81F9-E7C7ECE57F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

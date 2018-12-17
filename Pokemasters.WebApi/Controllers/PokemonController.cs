@@ -1,4 +1,5 @@
 ﻿using Pokemasters.Repositories;
+using Pokemasters.Repositories.DBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +14,15 @@ namespace Pokemasters.Controllers
         // typical class has i) properties ii) constructor iii) methods
 
         // declaring the object as local variable
-        private IPokemon _repo;
+        private IReadPokemon _repo;
 
         // constructor to configure default shit for object
-        public PokemonController(IPokemon repo)
+        public PokemonController(IReadPokemon repo)
         {
             // initialize the object
             _repo = repo;
         }
-        public IEnumerable<string> GetPokemonList()
+        public IEnumerable<Pokemon> GetPokemonList()
         {
             var PokemonList = _repo.GetAllPokemon();
             return PokemonList;

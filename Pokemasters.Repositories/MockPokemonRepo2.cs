@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Pokemasters.Repositories
 {
-    public class MockPokemonRepo2 : IPokemon
+    public class MockPokemonRepo2 //: IReadPokemon
     {
         public IEnumerable<string> GetAllPokemon()
         {

@@ -1,16 +1,17 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Pokemasters.Contracts.Models
+namespace Pokemasters.Repositories.DBO
 {
     public class Pokemon
     {
+        public ObjectId Id { get; set; }
         public int PokemonId { get; set; }
         public string Name { get; set; }
         public string PrimaryType { get; set; }
         public string SecondaryType { get; set; }
-
     }
 }
