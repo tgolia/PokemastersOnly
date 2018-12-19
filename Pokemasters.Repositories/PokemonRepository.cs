@@ -10,7 +10,8 @@ namespace Pokemasters.Repositories
 {
     public class PokemonRepository : IReadPokemon
     {
-        static string connectionString = "mongodb://mongo01.jitterbug.test/?replicaSet=rs0";
+        //static string connectionString = "mongodb://mongo01.jitterbug.test/?replicaSet=rs0";
+        static string connectionString = "mongodb://localhost:27017";
         static string databaseName = "PokemastersOnly";
         static string collectionName = "Pokemon";
         static IMongoCollection<Pokemon> collection;
