@@ -120,6 +120,7 @@
   <ItemGroup>
     <Compile Include="DBO\Pokemon.cs" />
     <Compile Include="IReadPokemon.cs" />
+    <Compile Include="IWritePokemon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PokemonRepository.cs" />
   </ItemGroup>

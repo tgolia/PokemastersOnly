@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using Pokemasters.Repositories.DBO;
 using System;
@@ -8,9 +9,10 @@ using System.Web;
 
 namespace Pokemasters.Repositories
 {
-    public class PokemonRepository : IReadPokemon
+    public class PokemonRepository : IReadPokemon, IWritePokemon
     {
-        static string connectionString = "mongodb://mongo01.jitterbug.test/?replicaSet=rs0";
+        //static string connectionString = "mongodb://mongo01.jitterbug.test/?replicaSet=rs0";
+        static string connectionString = "mongodb://localhost:27017";
         static string databaseName = "PokemastersOnly";
         static string collectionName = "Pokemon";
         static IMongoCollection<Pokemon> collection;
@@ -37,5 +39,22 @@ namespace Pokemasters.Repositories
             var filter = Builders<Pokemon>.Filter.Where(x => x.PokemonId == id);
             return collection.Find(filter).FirstOrDefault()?.Name;
         }
+
+        public void AddPokemon(Pokemon pokemon)
+        {
+            var document = new BsonDocument
+            {
+              {"PokemonId", BsonInt32.Create(7)},
+              {"PokemonName", new BsonString("Squirtle")},
+              { "PrimaryType", new BsonString("Water")}
+            };
+
+            collection.InsertOne(document);
+        }
+
+        //public IEnumerable<Pokemon> MapPokemonProperties(List<Pokemon> PokemonList)
+        //{
+        //    PokemonList.ForEach(seri)
+        //}
     }
 }

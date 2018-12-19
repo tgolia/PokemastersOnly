@@ -15,12 +15,14 @@ namespace Pokemasters.Controllers
 
         // declaring the object as local variable
         private IReadPokemon _repo;
+        private IWritePokemon _repo2;
 
         // constructor to configure default shit for object
-        public PokemonController(IReadPokemon repo)
+        public PokemonController(IReadPokemon repo, IWritePokemon repo2)
         {
             // initialize the object
             _repo = repo;
+            _repo2 = repo2;
         }
         public IEnumerable<Pokemon> GetPokemonList()
         {
@@ -35,5 +37,12 @@ namespace Pokemasters.Controllers
             return Pokemon;
         }
 
-    }
+        public HttpResponseMessage AddPokemon(Pokemon pokemon)
+        {
+          _repo2.AddPokemon(pokemon);
+          Console.Write(pokemon);
+          return new HttpResponseMessage(HttpStatusCode.OK);
+        }
+
+}
 }
