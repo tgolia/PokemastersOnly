@@ -1,0 +1,6 @@
+C:\Users\Travis\Dev\PokemastersOnly\Pokemasters.UnitTests\bin\Debug\Pokemasters.UnitTests.dll
+C:\Users\Travis\Dev\PokemastersOnly\Pokemasters.UnitTests\bin\Debug\Pokemasters.UnitTests.pdb
+C:\Users\Travis\Dev\PokemastersOnly\Pokemasters.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Travis\Dev\PokemastersOnly\Pokemasters.UnitTests\obj\Debug\Pokemasters.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Travis\Dev\PokemastersOnly\Pokemasters.UnitTests\obj\Debug\Pokemasters.UnitTests.dll
+C:\Users\Travis\Dev\PokemastersOnly\Pokemasters.UnitTests\obj\Debug\Pokemasters.UnitTests.pdb

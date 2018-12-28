@@ -19,7 +19,7 @@ namespace Pokemasters.Controllers
         // constructor to configure default shit for object
         public PokemonController(IReadPokemon repo)
         {
-            // initialize the object
+            // set local repo variable to DBO passed in Repo's implementation of interface
             _repo = repo;
         }
         public IEnumerable<Pokemon> GetPokemonList()
